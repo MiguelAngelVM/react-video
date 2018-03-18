@@ -5,10 +5,6 @@ import './media.css';
 class Media extends PureComponent{
     constructor(props){
         super(props);
-        this.handleClick = this.handleClick.bind(this);
-    }
-    handleClick = (event) => {
-        console.log(this.props.title);
     }
     render(){
         const styles = {
@@ -20,7 +16,7 @@ class Media extends PureComponent{
             }
         }
         return(
-            <div className='Media' onClick={this.handleClick}>
+            <div className='Media' onClick={this.props.handleClick}>
                 <div className='Media-cover'>
                     <img 
                         src={this.props.cover} 
